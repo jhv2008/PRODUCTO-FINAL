@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox spacing="14" minWidth="1140" minHeight="670" styleClass="contenido" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.sysventas.controller.ProductoController">
+ <HBox spacing="14" alignment="CENTER_LEFT" styleClass="barra-busqueda"><Label text="Gestionar zapatillas" styleClass="seccion"/><Region HBox.hgrow="ALWAYS"/><Label text="Buscar"/><TextField fx:id="txtFiltroDato" promptText="Modelo, marca, público o talla" prefWidth="240"/><Button text="Buscar" onAction="#listar" styleClass="btn-buscar"/></HBox>
+ <HBox spacing="18" VBox.vgrow="ALWAYS">
+  <VBox spacing="12" prefWidth="345" minWidth="345" styleClass="panel-formulario"><Label text="Formulario de zapatilla" styleClass="seccion"/>
+   <GridPane hgap="10" vgap="8"><columnConstraints><ColumnConstraints minWidth="112"/><ColumnConstraints hgrow="ALWAYS"/></columnConstraints><children>
+<Label text="Tipo" GridPane.rowIndex="0"/><ComboBox fx:id="cbxTipoProducto" disable="true" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+<Label text="Modelo" GridPane.rowIndex="1"/><TextField fx:id="txtNombreProducto" promptText="Ejemplo: Urban One" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+<Label text="Público" GridPane.rowIndex="2"/><ComboBox fx:id="cbxGenero" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+<Label text="Talla" GridPane.rowIndex="3"/><ComboBox fx:id="cbxTalla" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+<Label text="Precio S/" GridPane.rowIndex="4"/><TextField fx:id="txtPUnit" promptText="249.90" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+<Label text="Precio anterior S/" GridPane.rowIndex="5"/><TextField fx:id="txtPUnitOld" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+<Label text="Utilidad S/" GridPane.rowIndex="6"/><TextField fx:id="txtUtilidad" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+<Label text="Stock" GridPane.rowIndex="7"/><TextField fx:id="txtStock" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+<Label text="Stock anterior" GridPane.rowIndex="8"/><TextField fx:id="txtStockOld" GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+<Label text="Marca" GridPane.rowIndex="9"/><ComboBox fx:id="cbxMarca" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="9"/>
+<Label text="Categoría" GridPane.rowIndex="10"/><ComboBox fx:id="cbxCategoria" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
+<Label text="Unidad de venta" GridPane.rowIndex="11"/><ComboBox fx:id="cbxUnidMedida" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="11"/>
+</children></GridPane>
+   <HBox spacing="10"><Button text="Guardar" onAction="#onGuardar" styleClass="btn-guardar"/><Button text="Cancelar / Nuevo" onAction="#clearForm" styleClass="btn-nuevo"/></HBox>
+   <Label fx:id="lbnMsg" wrapText="true" maxWidth="315" styleClass="mensaje"/>
+  </VBox>
+  <TableView fx:id="tableView" HBox.hgrow="ALWAYS"/>
+ </HBox>
+</VBox>

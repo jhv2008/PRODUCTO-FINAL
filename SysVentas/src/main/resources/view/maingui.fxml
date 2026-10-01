@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane styleClass="tienda-fondo" prefWidth="1180" prefHeight="700" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.sysventas.controller.MainguiController">
+ <top><VBox><MenuBar><menus>
+  <Menu text="Archivo" styleClass="menu-archivo"><items><MenuItem text="Administrar zapatillas" onAction="#abrirProductos"/><SeparatorMenuItem/><MenuItem text="Salir" onAction="#salir"/></items></Menu>
+  <Menu text="Marcas" styleClass="menu-marcas"><items><MenuItem text="Todas" onAction="#abrirProductos"/><MenuItem styleClass="marca-nike" text="Nike" onAction="#nike"/><MenuItem styleClass="marca-adidas" text="Adidas" onAction="#adidas"/><MenuItem styleClass="marca-jordan" text="Jordan" onAction="#jordan"/><MenuItem styleClass="marca-puma" text="Puma" onAction="#puma"/><MenuItem styleClass="marca-newatletic" text="New Atletic" onAction="#newAtletic"/></items></Menu>
+  <Menu text="Editar" styleClass="menu-editar"><items><MenuItem text="Nuevo / Limpiar formulario" onAction="#nuevo"/></items></Menu>
+  <Menu text="Ayuda" styleClass="menu-ayuda"><items><MenuItem text="Cómo usar la tienda" onAction="#ayuda"/></items></Menu>
+ </menus></MenuBar><VBox styleClass="banner" spacing="8"><Label text="TIENDA DE ZAPATILLAS JHON" styleClass="titulo"/><Label text="Encuentra tu estilo, elige tu talla." styleClass="subtitulo"/><Label text="MUJER 34–40   ·   HOMBRE 38–43" styleClass="insignia"/></VBox></VBox></top>
+ <center><TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE"/></center>
+ <bottom><Label text="Nike · Adidas · Jordan · Puma · New Atletic  |  Datos de práctica: se reinician al cerrar" styleClass="pie"/></bottom>
+</BorderPane>
